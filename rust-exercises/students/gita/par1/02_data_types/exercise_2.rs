@@ -36,10 +36,35 @@ fn exercise_2(){
 
 }
 
+
+
+// Write a function exercise_3() that:
+
+// Declares a u8 variable with value 250
+// Prints it
+// Declares a u16 variable that takes the u8 value and adds 1000 to it — you'll need to cast: value as u16
+// Prints the u16 result
+// Declares an i32, an f64, and converts the i32 to f64 using as f64. Show that 7 / 2 in integers equals 3, but 7.0 / 2.0 in floats equals 3.5
+// Print both results with labels
+
+
 fn exercise_3(){
     // WRITE EXERCISE 3 HERE
+    let value1:u8=250;
+   
+    println!("VALUE 1_ : {}", value1);
+    let value2:u16=value1 as u16;
+    println!("VALUE_2: {}", value2);
+    let value3:i32=7/3;
+    println!("VALUE 3: {}", value3);
+    let value4:f64=7.0/2.0;
+    println!("VALUE 4: {}", value4);
+    let value3:f64=value3 as f64;
+    println!("VALUE 3: {}", value3);
+
+
 }
 
 fn main(){
-    exercise_2();
+    exercise_3();
 }

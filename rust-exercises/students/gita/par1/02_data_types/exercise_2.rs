@@ -36,6 +36,10 @@ fn exercise_2(){
 
 }
 
+fn exercise_3(){
+    // WRITE EXERCISE 3 HERE
+}
+
 fn main(){
     exercise_2();
 }

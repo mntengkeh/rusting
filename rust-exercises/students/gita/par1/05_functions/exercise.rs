@@ -83,17 +83,70 @@ fn exercise_1(){
 
 fn main() {
     exercise_1();
+    exercise_2();
 }
-// Returns "freezing" if < 0.0, "cold" if < 15.0, "warm" if < 25.0,
-// else "hot" — using `if` as an expression
 
-// **Function 3:** `calculate_bmi(weight_kg: f64, height_m: f64) -> f64`
-// Returns weight / (height * height) as an expression
 
-// **Function 4:** `describe_bmi(bmi: f64) -> &'static str`
-// Under 18.5 → "Underweight", 18.5–25.0 → "Normal",
-// 25.0–30.0 → "Overweight", above 30.0 → "Obese"
 
-// In `exercise_1()`, call all four with sample values and print results.
+// ## Exercise 2 — Recursive Thinking 🌀
+
+// Write `exercise_2()` that calls two recursive functions:
+
+fn exercise_2() {
+    for i in 0..=10 {
+        println!("{}! = {}", i, factorial(i));
+    }
+    for i in 0..=10 {
+        println!("fib({}) = {}", i, fibonacci(i));
+    }
+}
+
+// **Function:** `factorial(n: u64) -> u64`
+fn factorial(n:u64)->u64 {
+    if n==0 {
+        1
+    }
+    else{
+        n*factorial(n-1)
+    }
+    
+}
+// Computes n! recursively.
+// - Base case: `factorial(0) = 1`
+// - Recursive case: `n * factorial(n - 1)`
+
+// **Function:** `fibonacci(n: u32) -> u64`
+fn fibonacci(n:u32)->u64 {
+    if n==0 {
+        0
+    }
+    else if n==1 {
+        1
+    }
+    else {
+        fibonacci(n-1)+fibonacci(n-2)
+    }
+    
+}
+// Computes the nth Fibonacci number.
+// - Base cases: `fibonacci(0) = 0`, `fibonacci(1) = 1`
+// - Recursive case: `fibonacci(n-1) + fibonacci(n-2)`
+
+// In `exercise_2()`, print:
+// - Factorials of 0 through 10
+// - Fibonacci numbers 0 through 10
+
+// **Expected output (partial):**
+// ```
+// 0! = 1
+// 1! = 1
+// 2! = 2
+// ...
+// 10! = 3628800
+// fib(0) = 0
+// fib(1) = 1
+// ...
+// fib(10) = 55
+// ```
 
 // ---

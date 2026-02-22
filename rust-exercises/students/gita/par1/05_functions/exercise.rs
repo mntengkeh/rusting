@@ -81,10 +81,6 @@ fn exercise_1(){
 
 }
 
-fn main() {
-    exercise_1();
-    exercise_2();
-}
 
 
 
@@ -128,25 +124,19 @@ fn fibonacci(n:u32)->u64 {
     }
     
 }
-// Computes the nth Fibonacci number.
-// - Base cases: `fibonacci(0) = 0`, `fibonacci(1) = 1`
-// - Recursive case: `fibonacci(n-1) + fibonacci(n-2)`
 
-// In `exercise_2()`, print:
-// - Factorials of 0 through 10
-// - Fibonacci numbers 0 through 10
 
-// **Expected output (partial):**
-// ```
-// 0! = 1
-// 1! = 1
-// 2! = 2
-// ...
-// 10! = 3628800
-// fib(0) = 0
-// fib(1) = 1
-// ...
-// fib(10) = 55
-// ```
+fn exercise_3(c:f32) {
+    let celsius_to_fahrenheit:f32={
+        let x=(c*9.0/5.0) + 32.0;
+        x
+    };
+    println!("The value of celsius to fahrenheit is : {}", celsius_to_fahrenheit);
+}
 
-// ---
+fn main() {
+    exercise_1();
+    exercise_2();
+     exercise_3(100.0);
+    
+}

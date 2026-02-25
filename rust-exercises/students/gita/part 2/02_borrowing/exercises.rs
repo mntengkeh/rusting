@@ -54,7 +54,18 @@ fn double_borrow_fixed() {
     println!("r2 is {}", r2);
 }
 
+
+fn mixed_borrow() {
+    let mut s=String::from("hello");
+    let r1=&s;
+    let r2=&s;
+    // : cannot borrow `s` as mutable because it is also borrowed as immutable
+    // let r3=&mut s;
+    println!("r1 is {}, r2 is {}", r1, r2);
+}
+
 fn main() {
 
     double_borrow_fixed();
+    mixed_borrow();
 }

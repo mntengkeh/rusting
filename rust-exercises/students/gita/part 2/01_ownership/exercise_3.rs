@@ -20,6 +20,29 @@ fn no_ownership_needed(s:String)->(String, usize) {
     (s, my_length)
 }
 
+// **Part C:** Show what happens with Copy types:
+// Demonstrate that `i32`, `f64`, `bool`, and `char` all
+// automatically copy when assigned, so you never need `.clone()`.
+
+fn never_needing_clone(){
+    let x=42;
+    let y=x;
+    println!("x is {} and y is {}", x, y);
+    let a=3.14;
+    let b=a;
+    println!("a is {} and b is {}", a, b);
+    let c=true;
+    let d=c;
+    println!("c is {} and d is {}", c, d);
+    let e='R';
+    let f=e;
+    println!("e is {} and f is {}", e, f);
+}
+
+// For each part, print output that proves your code works correctly
+// and add comments explaining your ownership decisions.
+
+
 fn exercise_3() {
     // part a
     let name=String::from("Gita");
@@ -29,6 +52,7 @@ fn exercise_3() {
     let (my_name, length)=no_ownership;
     println!("My name is {} and the length of my name is {}", my_name, length);
     println!("My name is {:?}", name);
+    never_needing_clone();
 }
 
 // dewfine the call_my_name function

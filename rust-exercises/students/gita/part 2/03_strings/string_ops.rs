@@ -24,4 +24,17 @@ fn concatenating_string() {
     let s2=String::from("World!");
     let s3=s1+&s2;
     println!("{}", s3);
+    // plus opersator uses method like: fn add(self, s: &str) -> String
+    // it takes ownership of the left side and borrows the right side
+}
+
+
+fn multiple_concatenations(){
+    let s1=String::from("tic");
+    let s2=String::from("tac");
+    let s3=Srting::from("toe");
+    // multiple concatenation use  format! macro
+    let s=format!("{}-{}-{}", s1, s2, s3); //Doesn't take ownership
+    println!("{}", s); //tic tac toe
+    println!("{}", s1); //still exist , because its ownership is nor taken
 }

@@ -8,6 +8,7 @@ concatenating_string();
 replacing_part_string();
 checking_contains();
 spliting_String();
+trimming_whitespace();
 
 }
 
@@ -68,4 +69,12 @@ contract values, debts, and a full monthly payment audit strin");
     for part in s.split(' ') {
         println!("{}", part)
     }
+}
+
+
+fn trimming_whitespace() {
+    let s=String::from("   hello gita  ");
+    println!("'{}'", s); // '   hello gita  '
+    let trimmed=s.trim();
+    println!("'{}'", trimmed);
 }

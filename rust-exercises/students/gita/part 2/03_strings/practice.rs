@@ -74,7 +74,7 @@ fn main() {
 fn string_index_learn() {
     let s=String::from("hello");
     let first=s[0]; //Errror! Strings don't support indexing
-    // why: INDEXING SUGGEST YOU'LL GET A CHARACTER, BUT RUST DIESN'T KNOW IF BYTE 0 IS A COMPLETE CHARACTER OR JUST THE FIRST BYTE OF A MULTI-BYTE CHARACTE. tO HANDLE THIS SAFELY, RUST PROVIDES DIFFERENT WAYS TO ITERATE
+    // why: INDEXING SUGGEST YOU'LL GET A CHARACTER, BUT RUST DOESN'T KNOW IF BYTE 0 IS A COMPLETE CHARACTER OR JUST THE FIRST BYTE OF A MULTI-BYTE CHARACTE. tO HANDLE THIS SAFELY, RUST PROVIDES DIFFERENT WAYS TO ITERATE
 
 }
 
@@ -96,6 +96,9 @@ fn string_iterates() {
     }
 
 // if you need to index, convert to chars and collect to a Vec
-    let chars=Vec<char>=s.chars().collect();
+    let chars:Vec<char>=s.chars().collect();
+    if let Some(first_char)=chars.get(0) {
+        println!("First character: {}", first_char);
+    }
 
 }
